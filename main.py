@@ -23,9 +23,14 @@ aapl_columns = aapl.columns
 # print(aapl.iloc[[22, 43], [0, 3]])
 
 # Samples 20 rows (random)
-sample = aapl.sample(20)
-print(sample)
+# sample = aapl.sample(20)
+# print(sample)
 
 # Change sample to months
-monthy_aapl = aapl.resample('M').mean()
-print(monthy_aapl)
+# print(aapl.resample('M').mean())
+# print(aapl.asfreq('M', method='bfill'))
+
+# Add column 'diff' to 'aapl'
+# aapl['diff'] = aapl.Open - aapl.Close
+# print(aapl['diff'].resample('M').mean())
+# del aapl['diff']
